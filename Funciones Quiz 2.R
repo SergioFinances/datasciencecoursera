@@ -15,7 +15,7 @@ pollutantmean <- function(directory, pollutant, id=1:332) {
   } else {
     x <- 0
     len <- 0
-    for (i in 1:332){
+    for (i in 1:id){
       y <- subset(df,ID == i,select=c(pollutant))
       len <- len + nrow(y)
       x <- x + sum(y)
